@@ -64,6 +64,284 @@
     <h1 class="page-type-title"></h1>
     
     
+    <article id="post-markdown" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+  <h2 class="article-title" itemprop="name">
+    <a href="/2025/11/30/markdown/">markdown</a>
+  </h2>
+  
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2025/11/30/markdown/" class="article-date">
+  <time datetime="2025-11-30T06:53:07.000Z" itemprop="datePublished">2025-11-30</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+        <h1 id="Markdown-语法入门教程（新手友好版）"><a href="#Markdown-语法入门教程（新手友好版）" class="headerlink" title="Markdown 语法入门教程（新手友好版）"></a>Markdown 语法入门教程（新手友好版）</h1><p>Markdown 是一种<strong>轻量级标记语言</strong>，由约翰·格鲁伯（John Gruber）于2004年设计。它用简单的符号标记文本格式，无需复杂的排版操作，写出来的内容既易读易写，又能快速转换为 HTML、PDF 等格式，广泛用于笔记、文档、博客、GitHub 说明文档（README.md）等场景。</p>
+<p>本文从新手视角，讲解 Markdown 核心语法，每个语法点都配示例，看完就能上手！</p>
+<h2 id="一、基础核心语法（必学）"><a href="#一、基础核心语法（必学）" class="headerlink" title="一、基础核心语法（必学）"></a>一、基础核心语法（必学）</h2><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h3><p>Markdown 用 <code>#</code> 表示标题，<code>#</code> 数量对应标题级别（1-6级），<code>#</code> 和标题文字之间<strong>必须加空格</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code># 一级标题</code></td>
+<td><h1>一级标题</h1></td>
+</tr>
+<tr>
+<td><code>## 二级标题</code></td>
+<td><h2>二级标题</h2></td>
+</tr>
+<tr>
+<td><code>### 三级标题</code></td>
+<td><h3>三级标题</h3></td>
+</tr>
+<tr>
+<td><code>#### 四级标题</code></td>
+<td><h4>四级标题</h4></td>
+</tr>
+<tr>
+<td><code>##### 五级标题</code></td>
+<td><h5>五级标题</h5></td>
+</tr>
+<tr>
+<td><code>###### 六级标题</code></td>
+<td><h6>六级标题</h6></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>新手建议：日常使用1-3级标题即可，层级过多会导致文档结构混乱。</p>
+</blockquote>
+<h3 id="2-段落与换行"><a href="#2-段落与换行" class="headerlink" title="2. 段落与换行"></a>2. 段落与换行</h3><ul>
+<li><strong>段落</strong>：直接输入文字即可，段落之间用<strong>空行</strong>分隔（按两次 Enter）；</li>
+<li><strong>换行</strong>：在一行文字末尾加<strong>两个及以上空格</strong>，再按 Enter（或直接加 <code>&lt;br&gt;</code> 标签）。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是第一个段落。Markdown 段落无需额外标记，直接写文字就行。</span><br><span class="line"></span><br><span class="line">这是第二个段落（和上一段隔了空行）。</span><br><span class="line">这一行是换行后的内容（末尾加了两个空格）。</span><br><span class="line">这一行也是换行<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>用<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>标签更直观。</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-文字强调（斜体-粗体-删除线）"><a href="#3-文字强调（斜体-粗体-删除线）" class="headerlink" title="3. 文字强调（斜体&#x2F;粗体&#x2F;删除线）"></a>3. 文字强调（斜体&#x2F;粗体&#x2F;删除线）</h3><p>用简单符号标记文字的强调效果，新手重点记前两个：</p>
+<table>
+<thead>
+<tr>
+<th>效果</th>
+<th>语法</th>
+<th>示例</th>
+<th>渲染结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>斜体</td>
+<td><code>*文字*</code> 或 <code>_文字_</code></td>
+<td><code>*斜体文字*</code></td>
+<td><em>斜体文字</em></td>
+</tr>
+<tr>
+<td>粗体</td>
+<td><code>**文字**</code> 或 <code>__文字__</code></td>
+<td><code>**粗体文字**</code></td>
+<td><strong>粗体文字</strong></td>
+</tr>
+<tr>
+<td>粗斜体</td>
+<td><code>***文字***</code> 或 <code>___文字___</code></td>
+<td><code>***粗斜体文字***</code></td>
+<td><em><strong>粗斜体文字</strong></em></td>
+</tr>
+<tr>
+<td>删除线</td>
+<td><code>~~文字~~</code></td>
+<td><code>~~已作废的文字~~</code></td>
+<td><del>已作废的文字</del></td>
+</tr>
+</tbody></table>
+<h3 id="4-列表（无序列表-有序列表）"><a href="#4-列表（无序列表-有序列表）" class="headerlink" title="4. 列表（无序列表&#x2F;有序列表）"></a>4. 列表（无序列表&#x2F;有序列表）</h3><p>列表是整理内容的核心，支持嵌套，新手先掌握基础用法。</p>
+<h4 id="（1）无序列表"><a href="#（1）无序列表" class="headerlink" title="（1）无序列表"></a>（1）无序列表</h4><p>用 <code>-</code>、<code>*</code> 或 <code>+</code> 开头（推荐用 <code>-</code>），符号和文字之间加空格。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 水果</span><br><span class="line"><span class="bullet">  -</span> 苹果</span><br><span class="line"><span class="bullet">  -</span> 香蕉</span><br><span class="line"><span class="bullet">-</span> 蔬菜</span><br><span class="line"><span class="bullet">  -</span> 西红柿</span><br><span class="line"><span class="bullet">  -</span> 黄瓜</span><br></pre></td></tr></table></figure>
+<p>渲染结果：</p>
+<ul>
+<li>水果<ul>
+<li>苹果</li>
+<li>香蕉</li>
+</ul>
+</li>
+<li>蔬菜<ul>
+<li>西红柿</li>
+<li>黄瓜</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）有序列表"><a href="#（2）有序列表" class="headerlink" title="（2）有序列表"></a>（2）有序列表</h4><p>用「数字 + 英文句点 + 空格」开头，数字顺序不影响渲染（但建议按自然顺序写）。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一步：打开 Markdown 编辑器</span><br><span class="line"><span class="bullet">2.</span> 第二步：输入基础语法</span><br><span class="line"><span class="bullet">3.</span> 第三步：预览效果</span><br><span class="line"><span class="bullet">   1.</span> 子步骤1：检查格式</span><br><span class="line"><span class="bullet">   2.</span> 子步骤2：调整细节</span><br></pre></td></tr></table></figure>
+<p>渲染结果：</p>
+<ol>
+<li>第一步：打开 Markdown 编辑器</li>
+<li>第二步：输入基础语法</li>
+<li>第三步：预览效果<ol>
+<li>子步骤1：检查格式</li>
+<li>子步骤2：调整细节</li>
+</ol>
+</li>
+</ol>
+<h3 id="5-链接（超链接）"><a href="#5-链接（超链接）" class="headerlink" title="5. 链接（超链接）"></a>5. 链接（超链接）</h3><p>Markdown 链接分「行内式」和「参考式」，新手优先学行内式。</p>
+<h4 id="（1）行内式（常用）"><a href="#（1）行内式（常用）" class="headerlink" title="（1）行内式（常用）"></a>（1）行内式（常用）</h4><p>语法：<code>[链接文字](链接地址 &quot;可选的提示文字&quot;)</code></p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com &quot;点击跳转到百度&quot;</span>)</span><br><span class="line">[<span class="string">我的博客</span>](<span class="link">https://blog.example.com</span>)</span><br></pre></td></tr></table></figure>
+<p>渲染结果：<br><a target="_blank" rel="noopener" href="https://www.baidu.com/" title="点击跳转到百度">百度</a><br><a target="_blank" rel="noopener" href="https://blog.example.com/">我的博客</a></p>
+<h4 id="（2）参考式（适合链接重复出现的场景）"><a href="#（2）参考式（适合链接重复出现的场景）" class="headerlink" title="（2）参考式（适合链接重复出现的场景）"></a>（2）参考式（适合链接重复出现的场景）</h4><p>语法：先定义链接标识，再在文中引用，适合长文档。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是[<span class="string">百度</span>][<span class="symbol">1</span>]的链接，再次引用[<span class="string">百度</span>][<span class="symbol">1</span>]更简洁。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https://www.baidu.com &quot;百度首页&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-图片"><a href="#6-图片" class="headerlink" title="6. 图片"></a>6. 图片</h3><p>语法和链接类似，只是开头多一个 <code>!</code>，核心是「<img src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="图片描述" title="可选提示">」。</p>
+<h4 id="（1）本地图片"><a href="#（1）本地图片" class="headerlink" title="（1）本地图片"></a>（1）本地图片</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地图片</span>](<span class="link">./images/photo.jpg &quot;我的照片&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>（<code>./images/photo.jpg</code> 是图片相对路径，根据实际位置调整）</p>
+<h4 id="（2）网络图片"><a href="#（2）网络图片" class="headerlink" title="（2）网络图片"></a>（2）网络图片</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">猫咪图片</span>](<span class="link">https://picsum.photos/200/100 &quot;可爱的猫咪&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>渲染效果（示例图）：<br><img src="https://picsum.photos/200/100" alt="猫咪图片" title="可爱的猫咪"></p>
+<blockquote>
+<p>新手提示：图片描述（alt 文字）建议写，提升可访问性，图片加载失败时会显示。</p>
+</blockquote>
+<h3 id="7-代码块（行内代码-多行代码）"><a href="#7-代码块（行内代码-多行代码）" class="headerlink" title="7. 代码块（行内代码&#x2F;多行代码）"></a>7. 代码块（行内代码&#x2F;多行代码）</h3><p>写技术文档必用，区分「行内代码」和「多行代码块」。</p>
+<h4 id="（1）行内代码"><a href="#（1）行内代码" class="headerlink" title="（1）行内代码"></a>（1）行内代码</h4><p>用单个反引号 <code>`</code> 包裹，适合标记少量代码&#x2F;命令。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在终端输入 <span class="code">`npm install`</span> 安装依赖，核心函数是 <span class="code">`render()`</span>。</span><br></pre></td></tr></table></figure>
+<p>渲染结果：<br>在终端输入 <code>npm install</code> 安装依赖，核心函数是 <code>render()</code>。</p>
+<h4 id="（2）多行代码块"><a href="#（2）多行代码块" class="headerlink" title="（2）多行代码块"></a>（2）多行代码块</h4><p>用三个反引号 &#96;&#96;&#96; 包裹，开头可指定语言（如 js、python），会自动语法高亮。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```javascript</span></span><br><span class="line"><span class="code">// JavaScript 示例代码</span></span><br><span class="line"><span class="code">function sayHi() &#123;</span></span><br><span class="line"><span class="code">  console.log(&quot;Hello Markdown!&quot;);</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">sayHi();</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">渲染结果：</span><br><span class="line">```javascript</span><br><span class="line">// JavaScript 示例代码</span><br><span class="line">function sayHi() &#123;</span><br><span class="line">  console.log(&quot;Hello Markdown!&quot;);</span><br><span class="line">&#125;</span><br><span class="line">sayHi();</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-引用（块引用）"><a href="#8-引用（块引用）" class="headerlink" title="8. 引用（块引用）"></a>8. 引用（块引用）</h3><p>用 <code>&gt;</code> 开头标记引用内容，支持嵌套（多个 <code>&gt;</code>），适合引用他人观点、备注说明。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 人生苦短，我用 Python。—— Guido van Rossum</span></span><br><span class="line"><span class="quote">&gt; </span></span><br><span class="line"><span class="quote">&gt; &gt; 嵌套引用：Markdown 让写作更简单。</span></span><br></pre></td></tr></table></figure>
+<p>渲染结果：</p>
+<blockquote>
+<p>人生苦短，我用 Python。—— Guido van Rossum</p>
+<blockquote>
+<p>嵌套引用：Markdown 让写作更简单。</p>
+</blockquote>
+</blockquote>
+<h3 id="9-分割线"><a href="#9-分割线" class="headerlink" title="9. 分割线"></a>9. 分割线</h3><p>用 <code>---</code>、<code>***</code> 或 <code>___</code> 单独占一行（符号数量≥3），用于分隔内容模块。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">这是上半部分内容</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">这是下半部分内容</span><br></pre></td></tr></table></figure>
+<h2 id="渲染结果：这是上半部分内容"><a href="#渲染结果：这是上半部分内容" class="headerlink" title="渲染结果：这是上半部分内容"></a>渲染结果：<br>这是上半部分内容</h2><p>这是下半部分内容</p>
+<h2 id="二、进阶语法（按需学习）"><a href="#二、进阶语法（按需学习）" class="headerlink" title="二、进阶语法（按需学习）"></a>二、进阶语法（按需学习）</h2><h3 id="1-表格"><a href="#1-表格" class="headerlink" title="1. 表格"></a>1. 表格</h3><p>Markdown 表格用 <code>|</code> 分隔列，<code>-</code> 分隔表头和内容，支持对齐方式。</p>
+<p>语法：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">| 姓名 | 年龄 | 职业 |</span><br><span class="line">|------|------|------|</span><br><span class="line">| 张三 | 20   | 学生 |</span><br><span class="line">| 李四 | 25   | 程序员 |</span><br><span class="line"></span><br><span class="line">// 带对齐方式（: 表示对齐方向）</span><br><span class="line">| 左对齐 | 居中对齐 | 右对齐 |</span><br><span class="line">|:------ |:------: |------: |</span><br><span class="line">| 文字1  | 文字2    | 文字3  |</span><br></pre></td></tr></table></figure>
+<p>渲染结果：</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>年龄</th>
+<th>职业</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>20</td>
+<td>学生</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>25</td>
+<td>程序员</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="center">居中对齐</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">文字1</td>
+<td align="center">文字2</td>
+<td align="right">文字3</td>
+</tr>
+</tbody></table>
+<h3 id="2-任务列表（待办清单）"><a href="#2-任务列表（待办清单）" class="headerlink" title="2. 任务列表（待办清单）"></a>2. 任务列表（待办清单）</h3><p>用 <code>- [ ]</code> 表示未完成，<code>- [x]</code> 表示已完成，适合做待办事项。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] 学习 Markdown 基础语法</span><br><span class="line"><span class="bullet">-</span> [ ] 练习表格和任务列表</span><br><span class="line"><span class="bullet">-</span> [ ] 用 Markdown 写一篇笔记</span><br></pre></td></tr></table></figure>
+<p>渲染结果：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 学习 Markdown 基础语法</li>
+<li><input disabled="" type="checkbox"> 练习表格和任务列表</li>
+<li><input disabled="" type="checkbox"> 用 Markdown 写一篇笔记</li>
+</ul>
+<h3 id="3-脚注"><a href="#3-脚注" class="headerlink" title="3. 脚注"></a>3. 脚注</h3><p>用 <code>[^标记]</code> 标记脚注位置，文末用 <code>[^标记]: 说明</code> 补充内容，适合添加注释&#x2F;参考资料。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Markdown 由约翰·格鲁伯创建[^1]，现已成为行业通用的标记语言[^2]。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">John Gruber，Markdown 创始人。</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">广泛用于 GitHub、Notion、Obsidian 等平台。</span></span><br></pre></td></tr></table></figure>
+<p>渲染结果：<br>Markdown 由约翰·格鲁伯创建[^1]，现已成为行业通用的标记语言[^2]。</p>
+<p>[^1]: John Gruber，Markdown 创始人。<br>[^2]: 广泛用于 GitHub、Notion、Obsidian 等平台。</p>
+<h3 id="4-目录（TOC）"><a href="#4-目录（TOC）" class="headerlink" title="4. 目录（TOC）"></a>4. 目录（TOC）</h3><p>部分编辑器（如 Typora、VS Code）支持 <code>[TOC]</code> 自动生成目录，基于标题层级。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[TOC]</span><br><span class="line"></span><br><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br></pre></td></tr></table></figure>
+<p>渲染后会生成包含所有标题的可点击目录（不同编辑器效果略有差异）。</p>
+<h3 id="5-转义字符"><a href="#5-转义字符" class="headerlink" title="5. 转义字符"></a>5. 转义字符</h3><p>如果想显示 Markdown 特殊符号（如 <code>#</code>、<code>*</code>、<code>!</code>），在符号前加 <code>\</code> 转义。</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\# 这不是标题（# 被转义）</span><br><span class="line">\* 这不是斜体（* 被转义）</span><br></pre></td></tr></table></figure>
+<p>渲染结果：<br># 这不是标题（# 被转义）<br>* 这不是斜体（* 被转义）</p>
+<h2 id="三、新手常见注意事项"><a href="#三、新手常见注意事项" class="headerlink" title="三、新手常见注意事项"></a>三、新手常见注意事项</h2><ol>
+<li><strong>空格的重要性</strong>：标题、列表、引用等语法中，符号和文字之间必须加空格（如 <code># 标题</code> 正确，<code>#标题</code> 错误）；</li>
+<li><strong>编辑器兼容</strong>：不同编辑器（如 Typora、GitHub、Notion）对 Markdown 语法的支持略有差异（比如部分平台不支持脚注），以预览效果为准；</li>
+<li><strong>简化学习</strong>：先掌握「标题、列表、强调、链接、代码块」核心语法，进阶语法按需学习；</li>
+<li><strong>实时预览</strong>：写 Markdown 时开启预览模式，及时检查格式是否正确。</li>
+</ol>
+<h2 id="四、新手推荐工具"><a href="#四、新手推荐工具" class="headerlink" title="四、新手推荐工具"></a>四、新手推荐工具</h2><h3 id="1-在线编辑器（无需安装）"><a href="#1-在线编辑器（无需安装）" class="headerlink" title="1. 在线编辑器（无需安装）"></a>1. 在线编辑器（无需安装）</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/710/">Markdown 编辑器（菜鸟工具）</a>：新手友好，实时预览；</li>
+<li><a target="_blank" rel="noopener" href="https://stackedit.io/">StackEdit</a>：功能全，支持同步到云盘；</li>
+<li>GitHub Gist：适合写代码片段。</li>
+</ul>
+<h3 id="2-客户端工具（本地使用）"><a href="#2-客户端工具（本地使用）" class="headerlink" title="2. 客户端工具（本地使用）"></a>2. 客户端工具（本地使用）</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://typora.io/">Typora</a>：所见即所得，新手首选（免费版可用）；</li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VS Code</a> + 插件（Markdown All in One）：代码+文档一体化；</li>
+<li><a target="_blank" rel="noopener" href="https://obsidian.md/">Obsidian</a>：适合写笔记、知识库，全平台同步。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://heyesu915.github.io/2025/11/30/markdown/" data-id="cuidoGE_TgcJxb1s63G-SmbRP" class="article-share-link">
+        分享
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+    
     <article id="post-Javascript-oop-入门" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -184,7 +462,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://heyesu915.github.io/2025/11/30/Javascript-oop-%E5%85%A5%E9%97%A8/" data-id="cuidGVXJySME05BFsSmX6K3uI" class="article-share-link">
+      <a data-url="https://heyesu915.github.io/2025/11/30/Javascript-oop-%E5%85%A5%E9%97%A8/" data-id="cuidkYH-4LvBmjaIxA2gzQsCT" class="article-share-link">
         分享
       </a>
       
@@ -238,7 +516,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://heyesu915.github.io/2025/11/28/HAPPY-WINTER/" data-id="cuid3V6jFGQCq_-eGWbcp_uZs" class="article-share-link">
+      <a data-url="https://heyesu915.github.io/2025/11/28/HAPPY-WINTER/" data-id="cuidz_7KUBGV-Fh6qUPTtpYEX" class="article-share-link">
         分享
       </a>
       
@@ -303,7 +581,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://heyesu915.github.io/2025/11/27/hello-world/" data-id="cuidGQh-Rw8OErbEt1JyXy2E8" class="article-share-link">
+      <a data-url="https://heyesu915.github.io/2025/11/27/hello-world/" data-id="cuidDTpol_mQKFR4tN7mf_Iwp" class="article-share-link">
         分享
       </a>
       
